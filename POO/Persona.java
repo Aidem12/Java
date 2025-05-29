@@ -13,7 +13,7 @@ public class Persona{
         //Toma el nombre del objeto que esta llamando al metodo
         System.out.println("Hola, soy "+ nombre + " " + apellido +" mi edad es " + edad);
 
-    }
+    };
 
 
     public static void main(String args[]){
