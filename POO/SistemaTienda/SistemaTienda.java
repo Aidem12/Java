@@ -5,6 +5,15 @@ import java.util.Scanner;
 
    
     public class SistemaTienda {
+
+        //Objetos Productos
+        private static SistemaTienda p1;
+        private static SistemaTienda p2;
+        private static SistemaTienda p3;
+
+        //Creacion del objeto cliente
+        private static SistemaTienda Cliente1;
+
         //Variables
 
         float precio;
@@ -29,6 +38,37 @@ import java.util.Scanner;
 
             }
 
+            //Metodo constructor
+            public SistemaTienda(int ID, String nombre, int Inventario, float precio) {
+                 this.ID = ID;
+                 this.nombre = nombre;
+                 this.Inventario = Inventario;
+                 this.precio = precio;
+            }
+
+            public void SolicitarNombre(){
+
+                Scanner scanner = new Scanner(System.in);
+                
+
+                System.out.println("Hola, ingrese su nombre:");
+                this.NCliente = scanner.nextLine();
+                LimpiarConsola();
+
+            }
+
+            public void SolicitarSaldo(){
+
+                Scanner scanner1 = new Scanner(System.in);
+                
+
+                System.out.println("Ingrese la cantidad de saldo disponible");
+                this.Saldo = scanner1.nextInt();
+                LimpiarConsola();
+
+            }
+
+
             public void MostrarInfo(){
 
 
@@ -48,46 +88,24 @@ import java.util.Scanner;
     //Clase main
     public static void main(String args[]){
 
-        Scanner scanner = new Scanner(System.in);
-        SistemaTienda IngresarDatos = new SistemaTienda();
-
-
-
-        System.out.println("Hola, ingrese su nombre:");
-        IngresarDatos.NCliente = scanner.nextLine();
-        LimpiarConsola();
-
-        System.out.println("Hola " + IngresarDatos.NCliente);  
         
-        System.out.println("Ingrese la cantidad de saldo disponible");
-        IngresarDatos.Saldo = scanner.nextInt();
-        LimpiarConsola();
+       
 
+
+        //Objeto llama meotods
+        Cliente1.SolicitarNombre();
+        Cliente1.SolicitarSaldo();
+
+
+        System.out.println("Hola " + Cliente1.NCliente);
         
 
-
-        //Objetos
-        SistemaTienda p1 = new SistemaTienda();
-        SistemaTienda p2 = new SistemaTienda();
-        SistemaTienda p3 = new SistemaTienda();
-
-        //Atributos
-        p1.ID = 01;
-        p1.nombre= "Papas";
-        p1.Inventario= 3;
-        p1.precio= (float) 100.00;
-
-        p2.ID = 02;
-        p2.nombre= "Cereal";
-        p2.Inventario= 5;
-        p2.precio= (float) 50.50;
-
-        p3.ID = 02;
-        p3.nombre= "Pasta";
-        p3.Inventario= 3;
-        p3.precio= (float) 10.50;
-
-
+        
+        //Atributos del constructor Producto
+       
+        p1 = new SistemaTienda(01, "Papas", 3, 5);
+        p2 = new SistemaTienda(02, "Catsu", 1, 1);
+        p3 = new SistemaTienda(03, "Sopa", 2, 3);
     }
 
 
