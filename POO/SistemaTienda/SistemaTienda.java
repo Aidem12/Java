@@ -19,7 +19,15 @@ import java.util.Scanner;
 
             //Metodos
 
+            public static void LimpiarConsola(){
 
+                try {
+                    new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+                } catch (Exception e) {
+                    System.out.println("Error al limpiar la consola");
+                }
+
+            }
 
             public void MostrarInfo(){
 
@@ -38,7 +46,7 @@ import java.util.Scanner;
             //Metodos 
 
     //Clase main
-    public void main(String args[]){
+    public static void main(String args[]){
 
         Scanner scanner = new Scanner(System.in);
         SistemaTienda IngresarDatos = new SistemaTienda();
@@ -47,7 +55,15 @@ import java.util.Scanner;
 
         System.out.println("Hola, ingrese su nombre:");
         IngresarDatos.NCliente = scanner.nextLine();
+        LimpiarConsola();
 
+        System.out.println("Hola " + IngresarDatos.NCliente);  
+        
+        System.out.println("Ingrese la cantidad de saldo disponible");
+        IngresarDatos.Saldo = scanner.nextInt();
+        LimpiarConsola();
+
+        
 
 
         //Objetos
@@ -72,11 +88,11 @@ import java.util.Scanner;
         p3.precio= (float) 10.50;
 
 
-    };
+    }
 
 
 
-    };
+    }
 
     
 
