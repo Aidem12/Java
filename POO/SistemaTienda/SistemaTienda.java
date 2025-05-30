@@ -6,23 +6,11 @@ import java.util.Scanner;
    
     public class SistemaTienda {
 
-        //Objetos Productos
-        private static SistemaTienda p1;
-        private static SistemaTienda p2;
-        private static SistemaTienda p3;
+        
+        
 
-        //Creacion del objeto cliente
-        private static SistemaTienda Cliente1;
-
-        //Variables
-
-        float precio;
-        String nombre;
-        int ID;
-        int Inventario;
-
-        String NCliente;
-        int Saldo;
+        
+        
 
 
 
@@ -38,13 +26,13 @@ import java.util.Scanner;
 
             }
 
-            //Metodo constructor
+            /*Metodo constructor
             public SistemaTienda(int ID, String nombre, int Inventario, float precio) {
                  this.ID = ID;
                  this.nombre = nombre;
                  this.Inventario = Inventario;
                  this.precio = precio;
-            }
+            } */
 
             public void SolicitarNombre(){
 
@@ -85,10 +73,15 @@ import java.util.Scanner;
             }
             //Metodos 
 
+
     //Clase main
     public static void main(String args[]){
 
         
+       SistemaTienda Cliente1 = new SistemaTienda();
+        SistemaTienda P1 = new SistemaTienda();
+        SistemaTienda P2 = new SistemaTienda();
+        SistemaTienda P3 = new SistemaTienda();
        
 
 
@@ -98,14 +91,17 @@ import java.util.Scanner;
 
 
         System.out.println("Hola " + Cliente1.NCliente);
+
+
+        P1.nombre= "Papas";
+        P1.precio= 2;
+        P1.ID= 01;
+        P1.Inventario = 10;
+
         
 
         
-        //Atributos del constructor Producto
-       
-        p1 = new SistemaTienda(01, "Papas", 3, 5);
-        p2 = new SistemaTienda(02, "Catsu", 1, 1);
-        p3 = new SistemaTienda(03, "Sopa", 2, 3);
+        
     }
 
 
