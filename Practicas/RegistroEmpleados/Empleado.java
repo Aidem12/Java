@@ -1,4 +1,4 @@
-package Practicas.RegistroEmpleados;
+package practicas.registroempleados;
 
 public class Empleado {
     
@@ -21,17 +21,9 @@ public class Empleado {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public int getEdad() {
         return Edad;
-    }
-
-
-    public void setEdad(int edad) {
-        Edad = edad;
     }
 
 
@@ -39,11 +31,6 @@ public class Empleado {
         return salario_base;
     }
 
-
-    public void setSalario_base(Double salario_base) {
-        this.salario_base = salario_base;
-    }
-    
     
 
 
